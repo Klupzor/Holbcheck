@@ -9,6 +9,8 @@ const bodyParser = require('body-parser')
 
 const app = express();
 
+const fs = require('fs');
+
 
 let jsondata = 'dgfjhfd';
 
@@ -22,27 +24,41 @@ app.use(function (req, res, next) {
 });
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
+app.use(bodyParser.json({ type: 'application/*+json' }))
 
 app.post('/login', (req, res) => {
 
-  const user_id = req.query.user
-  const pass = req.query.pass
+  const user_id = req.body.user
+  const pass = req.body.pass
+  console.log(req.body.pass)
   let url = `http://localhost:3300/login/${user_id}/${pass}`;
   console.log(url)
 
   const dicty = {};
-  request({ url, method: 'POST' }, function (error, response, body) {
+  request({ url, method: 'POST', }, function (error, response, body) {
     jsondata = body
   
   setTimeout(function() {
-    res.send(
-      {}
+    res.status(200).send(
+      {'status': 'ok'}
     )
   }, 3000)
-  console.log(typeof body)
   jsondata = JSON.parse(body).cokies
   console.log(jsondata)
+
+
+  let lyrics = 'But still I\'m having memories of high speeds when the cops crashed\n' + 
+             'As I laugh, pushin the gas while my Glocks blast\n' + 
+             'We was young and we was dumb but we had heart';
+
+// write to a new file named 2pac.txt
+  fs.writeFile(`${user_id}.txt`, jsondata, (err) => {
+    // throws an error, you could also catch it here
+    if (err) throw err;
+
+    // success case, the file was saved
+    console.log('Lyric saved!');
+});
 });
   
 }
@@ -99,16 +115,39 @@ app.get('/project', (req, res) => {
   request(options, function (error, response, body) {
     dicty['name'] = JSON.parse(body).name
     dicty['tasks'] = JSON.parse(body).tasks
+    console.log()
     res.send(dicty)
   });
 }
 );
 
 app.get('/check', (req, res) => {
+  const options = {
+    headers: {
+      'Host': 'intranet.hbtn.io',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'Accept-Language': 'en-US,en;q=0.5',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Referer': 'https://intranet.hbtn.io/',
+      'DNT': 1,
+      'Connection': 'keep-alive',
+      'Cookie':
+        jsondata,
+      'Upgrade-Insecure-Requests': 1
+    }
+  }
   const dicty = {};
-  let url = 'https://intranet.hbtn.io/tasks/1007/start_correction.json?auth_token=b04e4bcb83572b5313886646e055da8d092b9a8af439b2ff6fbbb88acdc102d5';
-  request({ url, method: 'POST' }, function (error, response, body) {
-    res.send(JSON.parse(body))
+  let url = 'https://intranet.hbtn.io/projects/231';
+  options['url'] = url;
+
+  request(options, function (error, response, body) {
+    var re = new RegExp('data-correction-id="35187"');
+    
+    const arrayl = String(body.match(/data-correction-id="(.*?)">/gm));
+    const carray2 = arrayl.split('"')
+    console.log(carray2[1])
+    res.send(body);
   });
 }
 );

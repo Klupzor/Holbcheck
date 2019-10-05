@@ -4,6 +4,7 @@ import mechanize
 from bs4 import BeautifulSoup
 from flask import Flask
 app = Flask(__name__)
+from flask import request
 
 
 @app.route('/login/<user_id>/<pass_w>', methods = ['POST'])
