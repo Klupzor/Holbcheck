@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f736 !important;
+}
+.image_background {
+    background-image: url('./imgs/header_background.png');
+    height: 400px;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.head_style{
+    margin-left: 40px;
+    padding-top: 100px;
+    color: #F2DDD2;
+}
+.logo{
+    position: relative;
+}
+.imag_logo{
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+.content_p{
+    width: 49%;
+}
+.hello{
+    margin-bottom: 52px;
+}
+section{
+    text-align: center;
+}
+.tabs{
+    justify-content: center;
+}
+section h4{
+    font-size: 30px;
+    padding-top: 40px;
+}
+.nav-tabs .nav-link{
+    width: 287px;
+    border: 1px solid #000 !important;
+    color: #000;
+}
+#home .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #eff7ff !important;
+    background-color: #000 !important;
+    border-color: #000 !important;
+    width: 287px;
+}
+.left_radius a{
+    border-radius: 20px 0 0 20px !important;
+}
+.right_radius a{
+    border-radius: 0 20px 20px 0 !important;
+}
+.nav-tabs{
+    border-bottom: 1px solid transparent !important;
+}
+.projects_info{
+    margin: 85px 0;
+}
+.title_project{
+    font-size: 27px;
+    font-weight: bold;
+}
+.task_uncheck{
+    font-size: 19px;
+}
+.progress {
+    margin: 10px;
+    width: 100%;
+    border-radius: 20px !important;
+}
+.text-right{
+    align-self: center;
+}
+.size_titles{
+    font-size: 14px;
+}
+.text-left{
+    padding-right: 100px !important;
+}
