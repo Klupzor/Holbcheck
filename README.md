@@ -1,6 +1,6 @@
                                                Holbcheck
 
-![alt text](https://drive.google.com/open?id=149C4IZ9U_qgU8A5r-40k75Er0AJkMmNT)
+<img src="mokup.PNG" width="500" height=auto />
 
 This project is intended to help Holberton students to check their progress through the intranet available projects and
 visualize tasks that are pending. That way they can keep focused on what's important to improve their performance. This is possible by the use of the Holberton API provided, which has the follwing end-points:
