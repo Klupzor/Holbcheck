@@ -5,6 +5,12 @@
 This project is intended to help Holberton students to check their progress through the intranet available projects and
 visualize tasks that are pending. That way they can keep focused on what's important to improve their performance. This is possible by the use of the Holberton API provided, which has the follwing end-points:
 
+
+The first step is to enter: http://holbcheck.fun, where you will find an interface where you will have to enter the id and password used in the Holberton School intranet, and click on login.
+If the data is correct, the page will redirect you to a page where you can see the projects and the level of progress of each one and the pending tasks.
+
+Otherwise an error message will appear.
+
   Authentication
 
     URL: POST /users/auth_token.json
