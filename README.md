@@ -1,7 +1,9 @@
                                                Holbcheck
-Project progress 
 
-Holberton API:
+![alt text](https://drive.google.com/open?id=149C4IZ9U_qgU8A5r-40k75Er0AJkMmNT)
+
+This project is intended to help Holberton students to check their progress through the intranet available projects and
+visualize tasks that are pending. That way they can keep focused on what's important to improve their performance. This is possible by the use of the Holberton API provided, which has the follwing end-points:
 
   Authentication
 
@@ -124,10 +126,11 @@ Holberton API:
 
 
 Authors
-  Maria Fernanda Mendez, Madez17, [https://github.com/Madez17]
-  Andres Lopez, Klupzor, [https://github.com/Klupzor/Holbcheck]
-  Yesid Gonzalez,  yawzyag, [https://github.com/yawzyag]
-  Oscar Vargas,  naxus1, [https://github.com/naxus1]
-  Ximena Andrade, xica369, [https://github.com/xica369]
-  Carlos Arias, carlosariasf, [https://github.com/carlosariasf]
-  Rodrigo Sierra, RodrigoSierraV,[https://github.com/RodrigoSierraV] 
+
+    Maria Fernanda Mendez, Madez17, [https://github.com/Madez17]
+    Andres Lopez, Klupzor, [https://github.com/Klupzor/Holbcheck]
+    Yesid Gonzalez,  yawzyag, [https://github.com/yawzyag]
+    Oscar Vargas,  naxus1, [https://github.com/naxus1]
+    Ximena Andrade, xica369, [https://github.com/xica369]
+    Carlos Arias, carlosariasf, [https://github.com/carlosariasf]
+    Rodrigo Sierra, RodrigoSierraV,[https://github.com/RodrigoSierraV] 
